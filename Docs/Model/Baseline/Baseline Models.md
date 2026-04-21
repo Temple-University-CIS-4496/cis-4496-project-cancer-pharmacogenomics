@@ -6,7 +6,7 @@ When applicable, the Automated Modeling and Reporting utility developed by TDSP 
 
 > If using the Automated Modeling and Reporting tool, most of the sections below will be generated automatically from this tool. 
 
-## Analytic Approach
+## Analytic Approach (hiu)
 * What is target definition
 * What are inputs (description)
 * What kind of model was built?
@@ -21,7 +21,7 @@ The final modeling approach used a stacked hybrid architecture that combined a C
 
 
 
-## Model Description
+## Model Description (mo)
 
 * Models and Parameters
 
@@ -33,7 +33,7 @@ The final modeling approach used a stacked hybrid architecture that combined a C
 	* Learner hyper-parameters
 
 
-## Results (Model Performance)
+## Results (Model Performance) (Grace)
 * ROC/Lift charts, AUC, R^2, MAPE as appropriate
 * Performance graphs for parameters sweeps if applicable
 
@@ -60,7 +60,7 @@ Linear Regression		1.3443		1.0079	   0.7631
 HistGradient			1.396169	1.047938   0.741699
 MLPRegressor			1.409077	1.059455   0.7369
 
-## Model Understanding
+## Model Understanding (Allan)
 
 * Variable Importance (significance)
   - The high cardinality feature, which was separately encoded as **DRUG_NAME_target_enc** is considered to be the biggest predictor in the baseline feature analysis, showing that identity carried the most weight when it came to the prediction for **LN_IC50**.
@@ -70,7 +70,7 @@ MLPRegressor			1.409077	1.059455   0.7369
 
 
 
-## Conclusion and Discussions for Next Steps
+## Conclusion and Discussions for Next Steps (Julie)
 
 * Conclusion on Feasibility Assessment of the Machine Learning Task
 
