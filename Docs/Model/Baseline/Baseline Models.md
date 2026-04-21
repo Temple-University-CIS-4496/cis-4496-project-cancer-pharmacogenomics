@@ -61,7 +61,9 @@ Figure 2: Chart of the tested models using the dataset with the preprocessing an
 | Linear Regression		 | 1.3443	| 1.0079	|  0.7631    |
 | HistGradient			 | 1.396169	| 1.047938  |  0.741699  | 
 | MLPRegressor			 | 1.409077	| 1.059455  |  0.7369    |
-Figure 3: Heatmap of the different TCGA_DESC values and DRUG_NAME with the LN_IC50 values. 
+
+Figure 3: Heatmap of the different TCGA_DESC values and DRUG_NAME with the LN_IC50 values. The lower the IC50 the more sensitive it is to treating the cancer type. The higher the IC50 is the less sensitive/likely it is to treat the cancer type. 
+
 <img width="1440" height="864" alt="IC50 HeatMap (All Cancers)" src="https://github.com/user-attachments/assets/94a79371-7ed7-449c-9512-6f5ed3ed86c0" />
 
 ## Model Understanding (Allan)
