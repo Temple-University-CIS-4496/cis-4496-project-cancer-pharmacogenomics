@@ -37,6 +37,7 @@ The final modeling approach used a stacked hybrid architecture that combined a C
 * ROC/Lift charts, AUC, R^2, MAPE as appropriate
 * Performance graphs for parameters sweeps if applicable
 
+Figure 1: Chart of all tested models default as a representation of good values. 
 | Model                 |   RMSE    |   MAE     |    R²     |
 |-----------------------|-----------|-----------|-----------|
 | CatBoost              | 1.131118  | 0.844668  | 0.832297  |
@@ -47,18 +48,19 @@ The final modeling approach used a stacked hybrid architecture that combined a C
 | ExtraTrees            | 1.249409  | 0.917899  | 0.795387  |
 | Ridge                 | 1.344436  | 1.008067  | 0.763079  |
 
-  
- Model 				     | RMSE		|  MAE		| R2 |
-XGBoost(w/ Optuna)   	1.032373	0.768512   0.8603
-LightGBM(w/ Optuna) 	1.035314  	0.772103   0.859503
-Catboost(w/ Optuna) 	1.050988 	0.784145   0.855216
-HistGradient(w/ Optuna) 1.099774	0.821224   0.841463
-Catboost				1.110923    0.829804   0.838232
-Extra Trees				1.2494		0.9181	   0.7954
-Ridge(w/ Optuna)		1.341		1.006	   0.76426895
-Linear Regression		1.3443		1.0079	   0.7631
-HistGradient			1.396169	1.047938   0.741699
-MLPRegressor			1.409077	1.059455   0.7369
+Figure 2: Chart of the tested models using the dataset with the preprocessing and hyperparameter tuning. 
+|Model 				     |   RMSE	|    MAE	|      R²  	 |
+|------------------------|----------|-----------|------------|
+| XGBoost(w/ Optuna)   	 | 1.032373	| 0.768512  |  0.8603	 |
+| LightGBM(w/ Optuna) 	 | 1.035314 | 0.772103  |  0.859503  |
+| Catboost(w/ Optuna) 	 | 1.050988 | 0.784145  |  0.855216  |
+| HistGradient(w/ Optuna)| 1.099774 | 0.821224  |  0.841463  |
+| Catboost		         | 1.110923 | 0.829804  |  0.838232  |
+| Extra Trees			 | 1.2494	| 0.9181	|  0.7954    |
+| Ridge(w/ Optuna)		 | 1.341	| 1.006		|  0.76426895|
+| Linear Regression		 | 1.3443	| 1.0079	|  0.7631    |
+| HistGradient			 | 1.396169	| 1.047938  |  0.741699  | 
+| MLPRegressor			 | 1.409077	| 1.059455  |  0.7369    |
 
 ## Model Understanding (Allan)
 
