@@ -65,7 +65,7 @@ Figure 2: Chart of the tested models using the dataset with the preprocessing an
 Figure 3: Heatmap of the different TCGA_DESC values and DRUG_NAME with the LN_IC50 values. The lower the IC50 the more sensitive it is to treating the cancer type. The higher the IC50 is the less sensitive/likely it is to treat the cancer type. 
 
 <img width="1440" height="864" alt="IC50 HeatMap (All Cancers)" src="https://github.com/user-attachments/assets/94a79371-7ed7-449c-9512-6f5ed3ed86c0" />
-
+As seen in the heatmap, Daporinad shows consistenly low IC50 across the board has a low IC50 indicating high sensitivity in vitro. This consistently likely reflects the effects of NAMPT (nicotinamide phosphoribosyltransferase) inhibitor, which targets a fundamental metabolic pathway that cancer relies on. 
 ## Model Understanding (Allan)
 
 * Variable Importance (significance)
