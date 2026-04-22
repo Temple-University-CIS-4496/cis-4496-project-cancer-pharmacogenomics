@@ -19,6 +19,31 @@ If applicable, the Automated Modeling and Reporting utility developed by Microso
 	* Learner hyper-parameters
 
 
+Table 1 : Parameters used
+| Parameter | CatBoost tuned | XGBoost tuned | LightGBM tuned |
+|---|---:|---:|---:|
+| iterations | 1500 | — | — |
+| n_estimators | — | 1600 | 1750 |
+| learning_rate | 0.13558330321686268 | 0.0606212053346252 | 0.05055647998564387 |
+| depth / max_depth | depth = 10 | max_depth = 10 | max_depth = 13 |
+| l2_leaf_reg | 0.01578981814610257 | — | — |
+| subsample | 0.7502720766157313 | 0.8664841675523584 | 0.8466836046614781 |
+| random_strength | 0.0035710492569881653 | — | — |
+| bagging_temperature | 2.863575984094419 | — | — |
+| min_data_in_leaf / min_child settings | min_data_in_leaf = 12 | min_child_weight = 3 | min_child_samples = 10 |
+| colsample_bytree | — | 0.663669197027016 | 0.6984490363901545 |
+| gamma | — | 0.41282236439827835 | — |
+| reg_alpha | — | 0.001139884908293192 | 0.26189360447192045 |
+| reg_lambda | — | 5.4367797220761656 | 0.325726294788637 |
+| num_leaves | — | — | 183 |
+| objective / loss_function | loss_function = RMSE | objective = reg:squarederror | objective = regression |
+| eval_metric | R2 | — | — |
+| tree_method | — | hist | — |
+| random_state | 42 | 42 | 42 |
+| n_jobs | — | -1 | -1 |
+| verbose | 0 | — | -1 |
+
+
 ## Results (Model Performance)
 * ROC/Lift charts, AUC, R^2, MAPE as appropriate
 * Performance graphs for parameters sweeps if applicable
