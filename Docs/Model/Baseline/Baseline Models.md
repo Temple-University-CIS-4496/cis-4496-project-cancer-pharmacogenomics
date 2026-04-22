@@ -38,15 +38,16 @@ The final modeling approach used a stacked hybrid architecture that combined a C
 * Performance graphs for parameters sweeps if applicable
 
 Figure 1: Chart of all tested models default as a representation of good values. 
-| Model                 |   RMSE    |   MAE     |    R²     |
+| Model                 | RMSE      | MAE       | R²        |
 |-----------------------|-----------|-----------|-----------|
-| CatBoost              | 1.131118  | 0.844668  | 0.832297  |
-| XGBoost               | 1.145858  | 0.854324  | 0.827898  |
-| MLPRegressor          | 1.189713  | 0.893602  | 0.814473  |
-| HistGradientBoosting  | 1.225448  | 0.914313  | 0.803160  |
-| LightGBM              | 1.226727  | 0.915228  | 0.802749  |
-| ExtraTrees            | 1.249409  | 0.917899  | 0.795387  |
-| Ridge                 | 1.344436  | 1.008067  | 0.763079  |
+| CatBoost              | 1.132169  | 0.843563  | 0.831986  |
+| XGBoost               | 1.140523  | 0.851656  | 0.829497  |
+| MLPRegressor          | 1.182636  | 0.888743  | 0.816673  |
+| LightGBM              | 1.229644  | 0.916978  | 0.801810  |
+| HistGradientBoosting  | 1.230592  | 0.916503  | 0.801504  |
+| ExtraTrees            | 1.232253  | 0.911635  | 0.800968  |
+| Ridge                 | 1.344522  | 1.007612  | 0.763048  |
+
 
 Figure 2: Chart of the tested models using the dataset with the preprocessing and hyperparameter tuning. 
 |Model 				     |   RMSE	|    MAE	|      R²  	 |
