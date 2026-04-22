@@ -73,11 +73,55 @@ As seen in the heatmap, Daporinad shows consistenly low IC50 across the board ha
 ## Model Understanding (Allan)
 
 * Variable Importance (significance)
+  
   - The high cardinality feature, which was separately encoded as **DRUG_NAME_target_enc** is considered to be the biggest predictor in the baseline feature analysis, showing that identity carried the most weight when it came to the prediction for **LN_IC50**.
   - The merged numerical features of **ploidy_wes**, **ploidy_snp6**, and **mutational burden** were among the most informative features for the baseline models.
   - Other Cancer-context based features like **TCGA_DESC**, **GDSC_Tissue_descriptor_1**, **GDSC_Tissue_descriptor_2**, and **TARGET_PATHWAY** contributed to the model by suporting the signals that account for the tissue, disease-specific, and pathway response patterns.
+    
 * Insight Derived from the Model
-- The baseline models suggest that drug response is mainly explained by a combination of drug identity and biological context, not by one feature alone. The strong importance of DRUG_NAME_target_enc shows that the specific drug being tested carries the largest share of predictive signal, which means different drugs already have distinct response patterns in the dataset.
+  
+ - The baseline models suggest that drug response is mainly explained by a combination of drug identity and biological context, not by one feature alone. The strong importance of DRUG_NAME_target_enc shows that the specific drug being tested carries the largest share of predictive signal, which means different drugs already have distinct response patterns in the dataset.
+ - The high ranking of ploidy_wes, ploidy_snp6, and mutational_burden suggests that genomic instability and mutation load help explain why some cell lines are more sensitive or resistant to treatment. The contribution of TCGA_DESC, GDSC Tissue descriptor 1, and GDSC Tissue descriptor 2 suggests that cancer type and tissue background provide important context for interpreting response, even if they are not as dominant as drug identity.
+ - The fact that nonlinear models such as CatBoost and XGBoost performed best supports the idea that the relationship between predictors and LN_IC50 is likely complex and interaction-based, rather than purely linear.
+ - Overall, the baseline results suggest that cancer drug sensitivity is influenced by interacting factors across drug, tumor, and genomic levels, which supports the decision to use more flexible machine learning models for later tuned and hybrid comparisons.
+
+Figure 3: Top 15 Features of Catboost
+| Feature                                      | Importance |
+|----------------------------------------------|------------|
+| DRUG_NAME_target_enc                         | 52.233626  |
+| ploidy_wes                                   | 7.435730   |
+| mutational_burden                            | 6.868373   |
+| Growth_Properties_Suspension                 | 6.782117   |
+| ploidy_snp6                                  | 6.470171   |
+| TARGET_PATHWAY_ERK_MAPK_signaling            | 1.713995   |
+| GDSC_Tissue_descriptor_1_leukemia            | 1.342382   |
+| GDSC_Tissue_descriptor_1_lymphoma            | 0.816106   |
+| Growth_Properties_Adherent                   | 0.618551   |
+| TCGA_DESC_NB                                 | 0.613951   |
+| TCGA_DESC_SCLC                               | 0.569806   |
+| TARGET_PATHWAY_DNA_replication               | 0.492163   |
+| TARGET_PATHWAY_EGFR_signaling                | 0.424365   |
+| GDSC_Tissue_descriptor_2_melanoma            | 0.404309   |
+| TCGA_DESC_PAAD                               | 0.389557   |
+
+Figure 4: Top 15 Features of XgBoost
+| Feature                                              | Importance |
+|------------------------------------------------------|------------|
+| Growth_Properties_Suspension                         | 0.135220   |
+| DRUG_NAME_target_enc                                 | 0.126386   |
+| GDSC_Tissue_descriptor_1_leukemia                    | 0.022176   |
+| TCGA_DESC_SCLC                                       | 0.021394   |
+| GDSC_Tissue_descriptor_2_melanoma                    | 0.021156   |
+| TCGA_DESC_PAAD                                       | 0.018818   |
+| GDSC_Tissue_descriptor_1_blood                       | 0.017471   |
+| GDSC_Tissue_descriptor_2_lymphoid_neoplasm_other     | 0.017121   |
+| GDSC_Tissue_descriptor_1_lymphoma                    | 0.016868   |
+| GDSC_Tissue_descriptor_2_rhabdomyosarcoma            | 0.016307   |
+| GDSC_Tissue_descriptor_2_head_and_neck               | 0.015500   |
+| GDSC_Tissue_descriptor_2_fibrosarcoma                | 0.013792   |
+| TCGA_DESC_MB                                         | 0.013783   |
+| TCGA_DESC_NB                                         | 0.012442   |
+| GDSC_Tissue_descriptor_2_mesothelioma                | 0.012044   |
 
 
 ## Conclusion and Discussions for Next Steps (Julie)
