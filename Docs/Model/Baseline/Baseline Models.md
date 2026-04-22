@@ -80,10 +80,10 @@ As seen in the heatmap, Daporinad shows consistenly low IC50 across the board ha
     
 * Insight Derived from the Model
   
- - The baseline models suggest that drug response is mainly explained by a combination of drug identity and biological context, not by one feature alone. The strong importance of DRUG_NAME_target_enc shows that the specific drug being tested carries the largest share of predictive signal, which means different drugs already have distinct response patterns in the dataset.
- - The high ranking of ploidy_wes, ploidy_snp6, and mutational_burden suggests that genomic instability and mutation load help explain why some cell lines are more sensitive or resistant to treatment. The contribution of TCGA_DESC, GDSC Tissue descriptor 1, and GDSC Tissue descriptor 2 suggests that cancer type and tissue background provide important context for interpreting response, even if they are not as dominant as drug identity.
- - The fact that nonlinear models such as CatBoost and XGBoost performed best supports the idea that the relationship between predictors and LN_IC50 is likely complex and interaction-based, rather than purely linear.
- - Overall, the baseline results suggest that cancer drug sensitivity is influenced by interacting factors across drug, tumor, and genomic levels, which supports the decision to use more flexible machine learning models for later tuned and hybrid comparisons.
+  - The baseline models suggest that drug response is mainly explained by a combination of drug identity and biological context, not by one feature alone. The strong importance of DRUG_NAME_target_enc shows that the specific drug being tested carries the largest share of predictive signal, which means different drugs already have distinct response patterns in the dataset.
+  - The high ranking of ploidy_wes, ploidy_snp6, and mutational_burden suggests that genomic instability and mutation load help explain why some cell lines are more sensitive or resistant to treatment. The contribution of TCGA_DESC, GDSC Tissue descriptor 1, and GDSC Tissue descriptor 2 suggests that cancer type and tissue background provide important context for interpreting response, even if they are not as dominant as drug identity.
+  - The fact that nonlinear models such as CatBoost and XGBoost performed best supports the idea that the relationship between predictors and LN_IC50 is likely complex and interaction-based, rather than purely linear.
+  - Overall, the baseline results suggest that cancer drug sensitivity is influenced by interacting factors across drug, tumor, and genomic levels, which supports the decision to use more flexible machine learning models for later tuned and hybrid comparisons.
 
 Figure 3: Top 15 Features of Catboost
 | Feature                                      | Importance |
