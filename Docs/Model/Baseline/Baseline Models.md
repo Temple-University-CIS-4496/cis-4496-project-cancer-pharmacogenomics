@@ -77,7 +77,7 @@ As seen in the heatmap, Daporinad shows consistenly low IC50 across the board ha
   - The merged numerical features of **ploidy_wes**, **ploidy_snp6**, and **mutational burden** were among the most informative features for the baseline models.
   - Other Cancer-context based features like **TCGA_DESC**, **GDSC_Tissue_descriptor_1**, **GDSC_Tissue_descriptor_2**, and **TARGET_PATHWAY** contributed to the model by suporting the signals that account for the tissue, disease-specific, and pathway response patterns.
 * Insight Derived from the Model
-
+- The baseline models suggest that drug response is mainly explained by a combination of drug identity and biological context, not by one feature alone. The strong importance of DRUG_NAME_target_enc shows that the specific drug being tested carries the largest share of predictive signal, which means different drugs already have distinct response patterns in the dataset.
 
 
 ## Conclusion and Discussions for Next Steps (Julie)
