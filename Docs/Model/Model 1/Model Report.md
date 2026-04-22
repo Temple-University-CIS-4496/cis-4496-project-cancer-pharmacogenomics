@@ -40,7 +40,6 @@ If applicable, the Automated Modeling and Reporting utility developed by Microso
 
 Figure 2 : Top 15 CatBoost tuned features
 ### Top 15 CatBoost tuned features
-
 | Feature | Importance |
 |---|---:|
 | DRUG_NAME_target_enc | 31.630180 |
@@ -61,7 +60,6 @@ Figure 2 : Top 15 CatBoost tuned features
 
 Figure 3 : Top 15 XGBoost tuned features
 ### Top 15 XGBoost tuned features
-
 | Feature | Importance |
 |---|---:|
 | TARGET_PATHWAY_Mitosis | 0.085053 |
@@ -82,7 +80,6 @@ Figure 3 : Top 15 XGBoost tuned features
 
 Figure 4 : Top 15 LightGBM tuned features
 ### Top 15 LightGBM tuned features
-
 | Feature | Importance |
 |---|---:|
 | DRUG_NAME_target_enc | 71568 |
