@@ -23,6 +23,15 @@ If applicable, the Automated Modeling and Reporting utility developed by Microso
 * ROC/Lift charts, AUC, R^2, MAPE as appropriate
 * Performance graphs for parameters sweeps if applicable
 
+
+  
+| Model | RMSE | MAE | R2 |
+|---|---:|---:|---:|
+| CatBoost tuned | 1.041411 | 0.777037 | 0.857843 |
+| XGBoost tuned | 1.041933 | 0.777403 | 0.857700 |
+| LightGBM tuned | 1.047572 | 0.781412 | 0.856156 |
+
+
 ## Model Understanding
 
 * Variable Importance (significance)
