@@ -49,12 +49,18 @@ Table 1 : Parameters used
 * Performance graphs for parameters sweeps if applicable
 
 
-  
+Table 1: Model Performance after OPTUNA-based hyper-tuning
+
 | Model | RMSE | MAE | R2 |
 |---|---:|---:|---:|
 | CatBoost tuned | 1.041411 | 0.777037 | 0.857843 |
 | XGBoost tuned | 1.041933 | 0.777403 | 0.857700 |
 | LightGBM tuned | 1.047572 | 0.781412 | 0.856156 |
+
+Figure 
+<img width="1786" height="520" alt="image" src="https://github.com/user-attachments/assets/52bb486e-b463-4140-98b9-dec9fc02df3c" />
+
+<img width="1789" height="520" alt="image" src="https://github.com/user-attachments/assets/c3c2ce6e-9054-4423-b2f7-c501a46eb029" />
 
 
 ## Model Understanding
