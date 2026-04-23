@@ -69,6 +69,7 @@ Table : Top 15 XGBoost Features
 | GDSC Tissue descriptor 1_lung_SCLC              | 0.010861   |
 | GDSC Tissue descriptor 2_digestive_system_other | 0.010577   |
 
+** For the final hybrid model, the biologically meaningful feature importance comes from the CatBoost and XGBoost base learners, because the meta-model only combines their prediction outputs.
 
 ## Algorithm
 * Description or images of data flow graph
