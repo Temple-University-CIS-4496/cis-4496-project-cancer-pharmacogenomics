@@ -67,10 +67,17 @@ Figure 2: Residual Plots for Tuned Models (CatBoost, XGBoost, LightGBM)
 ## Model Understanding
 
 * Variable Importance (significance)
-  - DRUG_NAME_target_enc remained one of the strongest predictors in the tuned models, especially in ***CatBoost*** tuned and LightGBM tuned, showing that drug identity continued to carry a large share of the predictive signal for LN_IC50.
-
+  - DRUG_NAME_target_enc remained one of the strongest predictors in the tuned models, especially in ***CatBoost*** tuned and ***LightGBM*** tuned, showing that drug identity continued to carry a large share of the predictive signal for **LN_IC50**.
+  - The genomic variables **mutational_burden**, **ploidy_wes**, and **ploidy_snp6** ranked among the most influential features in ***CatBoost*** tuned and ***LightGBM*** tuned, indicating that genomic instability and chromosome-level variation contributed strongly to prediction.
+  - Multiple **TARGET_PATHWAY** categories, including ERK MAPK signaling, DNA replication, Apoptosis regulation, PI3K/MTOR signaling, and Mitosis, appeared among the top features, showing that pathway-level drug mechanism contributed meaningful predictive signal.
+  - Cancer and tissue-context variables such as **TCGA_DESC_SCLC**, **GDSC Tissue descriptor 1_leukemia**, and **GDSC Tissue descriptor 2_melanoma** also appeared repeatedly among the top-ranked predictors, indicating that disease background continued to support the prediction task.
 
 * Insight Derived from the Model
+  
+  - The tuned models suggest that drug sensitivity is explained by a combination of drug identity, genomic state, and biological context, rather than by any single variable alone.
+  - The continued importance of **DRUG_NAME_target_enc** indicates that the models first learn that different drugs have distinct response patterns, which is expected in a pharmacogenomics setting. The strong presence of **mutational_burden**, **ploidy_wes**, and **ploidy_snp6** suggests that genomic instability plays a major role in explaining why some cancer cell lines are more sensitive or resistant to treatment.
+  - The repeated appearance of **Growth Properties**, **TCGA_DESC**, and **GDSC tissue descriptors** indicates that cell-line behavior and cancer-type background add important context that helps refine the ***drug-response prediction***.
+  - Overall, the tuned models suggest that **LN_IC50** prediction depends on interactions between the tested drug, the genomic condition of the cell line, and the cancer/tissue environment, which also helps explain why tuned nonlinear boosting models performed strongly.
 
 Table 2: Top 15 CatBoost tuned features
 
