@@ -40,3 +40,12 @@ The final modeling approach used a stacked hybrid architecture that combined a C
 ## Results
 * ROC/Lift charts, AUC, R^2, MAPE as appropriate
 * Performance graphs for parameters sweeps if applicable
+
+Table : The Model Performance for the Hybrid-Approach
+| Model                 |   RMSE   |   MAE    |    R²     |
+|-----------------------|----------|----------|-----------|
+| Stacked linear layer  | 1.032433 | 0.769603 | 0.860284  |
+| Average blend         | 1.032626 | 0.769966 | 0.860231  |
+| CatBoost only         | 1.036871 | 0.772769 | 0.859080  |
+| XGBoost only          | 1.041301 | 0.776740 | 0.857873  |
+
