@@ -57,9 +57,10 @@ Table 1: Model Performance after OPTUNA-based hyper-tuning
 | XGBoost tuned | 1.041933 | 0.777403 | 0.857700 |
 | LightGBM tuned | 1.047572 | 0.781412 | 0.856156 |
 
-Figure 
+Figure 1: Comparison between the Actual and the Predicted LN_IC50 values
 <img width="1786" height="520" alt="image" src="https://github.com/user-attachments/assets/52bb486e-b463-4140-98b9-dec9fc02df3c" />
 
+Figure 2: Residual Plots for Tuned Models (CatBoost, XGBoost, LightGBM)
 <img width="1789" height="520" alt="image" src="https://github.com/user-attachments/assets/c3c2ce6e-9054-4423-b2f7-c501a46eb029" />
 
 
@@ -69,7 +70,8 @@ Figure
 
 * Insight Derived from the Model
 
-Figure 2 : Top 15 CatBoost tuned features
+Table 2: Top 15 CatBoost tuned features
+
 ### Top 15 CatBoost tuned features
 | Feature | Importance |
 |---|---:|
@@ -89,8 +91,9 @@ Figure 2 : Top 15 CatBoost tuned features
 | TARGET_PATHWAY_EGFR signaling | 0.747406 |
 | GDSC Tissue descriptor 2_melanoma | 0.721836 |
 
-Figure 3 : Top 15 XGBoost tuned features
-### Top 15 XGBoost tuned features
+Table 3: Top 15 XGBoost-tuned features
+
+### Top 15 XGBoost-tuned features
 | Feature | Importance |
 |---|---:|
 | TARGET_PATHWAY_Mitosis | 0.085053 |
@@ -109,7 +112,8 @@ Figure 3 : Top 15 XGBoost tuned features
 | GDSC Tissue descriptor 1_lymphoma | 0.010773 |
 | GDSC Tissue descriptor 2_pancreas | 0.010768 |
 
-Figure 4 : Top 15 LightGBM tuned features
+Table 4: Top 15 LightGBM tuned features
+
 ### Top 15 LightGBM tuned features
 | Feature | Importance |
 |---|---:|
