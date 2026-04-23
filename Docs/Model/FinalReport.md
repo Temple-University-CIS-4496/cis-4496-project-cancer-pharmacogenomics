@@ -18,6 +18,9 @@ The final modeling approach used a stacked hybrid architecture that combined a C
 * Simple solution architecture (Data sources, solution components, data flow)
 * What is output?
 
+<img width="1147" height="618" alt="Screenshot 2026-04-23 094942" src="https://github.com/user-attachments/assets/32eca5bc-2edf-4949-a22d-78392bf8cbbf" />
+
+
 ## Data
 * Source
 * Data Schema
