@@ -67,6 +67,8 @@ Figure 2: Residual Plots for Tuned Models (CatBoost, XGBoost, LightGBM)
 ## Model Understanding
 
 * Variable Importance (significance)
+  - kjuhk
+
 
 * Insight Derived from the Model
 
