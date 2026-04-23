@@ -67,7 +67,7 @@ Figure 2: Residual Plots for Tuned Models (CatBoost, XGBoost, LightGBM)
 ## Model Understanding
 
 * Variable Importance (significance)
-  - kjuhk
+  - DRUG_NAME_target_enc remained one of the strongest predictors in the tuned models, especially in ***CatBoost*** tuned and LightGBM tuned, showing that drug identity continued to carry a large share of the predictive signal for LN_IC50.
 
 
 * Insight Derived from the Model
