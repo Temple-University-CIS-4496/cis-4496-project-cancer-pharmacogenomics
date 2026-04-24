@@ -26,13 +26,31 @@ When applicable, the Automated Modeling and Reporting utility developed by TDSP 
 
 * Models and Parameters
 
-	* Description or images of data flow graph
-  		* if AzureML, link to:
-    		* Training experiment
-    		* Scoring workflow
-	* What learner(s) were used?
-	* Learner hyper-parameters
+	* Data Flow/ Pipeline Description
+   		The modeling pipline begins with the preprocessed dataset containing drug, genomic, and tissue level features. Missing values were handled through targeted imputation, followed by encoding strategies tailored to faeture type encoding for high cardinality variables such as drug identity. Continuous variables were standardized to ensure consistent scaling across models.
 
+		The dataset was then split using a group aware strategy to prevent data leakage between related samples. Model training was preformed using cross validation, and predictions were generated on a held out test set to evaluate generalization preformance. The overall workflow follows a standard machine learning pipline:
+
+Data preprocessing ---> Feature engineering ---> Model Training ---> Evaluation.
+
+	* What learner(s) were used?
+		Multiple supervised learning algorithms were evaluated to identify the most effective approach for predicting LN_IC50. These included linear models (Linear Regression and Ridge), tree based ensemble models (Random Forest and Extra Trees), and advanced grdient boosting models such as XGBoost, LightGBM, CatBoost, and HistGradientBoosting.
+
+		Among these, gradient boosting models demonstrated the strongest preformance due to their ability to caputre nonlinear relationships and complex feature interactions within the dataset. In addition, a neural network model (MLPRegressor) was tested to explore potential performance improvements from deep learning approaches.
+		
+	* Learner hyper-parameters
+		Default hyperparameters were initially used to establish baseline performance acrosse all models. Following this, hyperparameter tuning was conducted using optimization techniques such as randomized search and Optuna to improve model performance.
+
+		Key hyperparameters tuned for gradient boosting models included:
+
+		* Number of trees (n_estimators)
+		* Learning rate
+		* Maximum tree depth
+		* Subsampling ratios
+		* Regularization parameter
+		For neural network models, parameters such as hidden layer size, activation function, and learning rate were adjusted.
+
+		The tuning process resulted in improved predictive preformance, particularly for XGBoost and LightGBM, which achieved the best balance between bias and variance on the validation data.
 
 ## Results (Model Performance) (Grace)
 * ROC/Lift charts, AUC, R^2, MAPE as appropriate
