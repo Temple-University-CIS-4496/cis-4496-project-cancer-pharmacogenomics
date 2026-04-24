@@ -39,13 +39,16 @@ Data preprocessing ---> Feature engineering ---> Model Training ---> Evaluation
 
   * Learner hyper-parameters
 		Default hyperparameters were initially used to establish baseline performance acrosse all models. Following this, hyperparameter tuning was conducted using optimization techniques such as randomized search and Optuna to improve model performance.
-		Key hyperparameters tuned for gradient boosting models included:
-		* Number of trees (n_estimators)
-		* Learning rate
-		* Maximum tree depth
-		* Subsampling ratios
-		* Regularization parameter
+		
+	Key hyperparameters tuned for gradient boosting models included:
+		
+	* Number of trees (n_estimators)
+	* Learning rate
+	* Maximum tree depth
+	* Subsampling ratios
+    * Regularization parameter
 		For neural network models, parameters such as hidden layer size, activation function, and learning rate were adjusted.
+
 		The tuning process resulted in improved predictive preformance, particularly for XGBoost and LightGBM, which achieved the best balance between bias and variance on the validation data.
 
 ## Results (Model Performance) (Grace)
