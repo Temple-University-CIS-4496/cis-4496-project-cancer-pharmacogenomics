@@ -57,10 +57,7 @@ Data preprocessing ---> Feature engineering ---> Model Training ---> Evaluation
 
 		The tuning process resulted in improved predictive preformance, particularly for XGBoost and LightGBM, which achieved the best balance between bias and variance on the validation data.
 
-## Results (Model Performance) (Grace)
-* ROC/Lift charts, AUC, R^2, MAPE as appropriate
-* Performance graphs for parameters sweeps if applicable
-
+## Results (Model Performance)
 Table 1:- Baseline Model Performance Using Default Settings; Compares RMSE, MAE, and R² across initial baseline models before hyperparameter tuning.
 | Model                 | RMSE      | MAE       | R²        |
 |-----------------------|-----------|-----------|-----------|
