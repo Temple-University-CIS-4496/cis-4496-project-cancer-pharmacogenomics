@@ -122,3 +122,36 @@ Table : The Model Performance for the Hybrid-Approach
 | CatBoost only         | 1.036871 | 0.772769 | 0.859080  |
 | XGBoost only          | 1.041301 | 0.776740 | 0.857873  |
 
+Table 1:- Baseline Model Performance Using Default Settings; Compares RMSE, MAE, and R² across initial baseline models before hyperparameter tuning.
+| Model                 | RMSE      | MAE       | R²        |
+|-----------------------|-----------|-----------|-----------|
+| CatBoost              | 1.132169  | 0.843563  | 0.831986  |
+| XGBoost               | 1.140523  | 0.851656  | 0.829497  |
+| MLPRegressor          | 1.182636  | 0.888743  | 0.816673  |
+| LightGBM              | 1.229644  | 0.916978  | 0.801810  |
+| HistGradientBoosting  | 1.230592  | 0.916503  | 0.801504  |
+| ExtraTrees            | 1.232253  | 0.911635  | 0.800968  |
+| Ridge                 | 1.344522  | 1.007612  | 0.763048  |
+
+Table 2:- Baseline Model Performance After Hyperparameter Tuning; Shows improved model performance after preprocessing and tuning, with XGBoost achieving the strongest results.
+|Model 				     |   RMSE	|    MAE	|      R²  	 |
+|------------------------|----------|-----------|------------|
+| XGBoost(w/ Optuna)   	 | 1.032373	| 0.768512  |  0.8603	 |
+| LightGBM(w/ Optuna) 	 | 1.035314 | 0.772103  |  0.859503  |
+| Catboost(w/ Optuna) 	 | 1.050988 | 0.784145  |  0.855216  |
+| HistGradient(w/ Optuna)| 1.099774 | 0.821224  |  0.841463  |
+| Catboost		         | 1.110923 | 0.829804  |  0.838232  |
+| Extra Trees			 | 1.2494	| 0.9181	|  0.7954    |
+| Ridge(w/ Optuna)		 | 1.341	| 1.006		|  0.76426895|
+| Linear Regression		 | 1.3443	| 1.0079	|  0.7631    |
+| HistGradient			 | 1.396169	| 1.047938  |  0.741699  | 
+| MLPRegressor			 | 1.409077	| 1.059455  |  0.7369    |
+
+Figure 3:- Baseline Actual vs. Predicted LN_IC50 Across Models;  Baseline models generally follow the diagonal trend, showing that LN_IC50 prediction is feasible, but stronger boosting models such as CatBoost and XGBoost show tighter prediction patterns than weaker models like Ridge.
+
+![Actual vs Predicted LN_IC50 for Baseline Models](actual%20vs%20predicted.png)
+
+After preprocessing, multiple supervised regression models were tested to compare how well they predicted LN_IC50. Based on Table 1, CatBoost performed best among the default baseline models, with the highest R²and the lowest RMSE/MAE. XGBoost followed closely, while MLPRegressor also showed reasonable predictive performance. LightGBM, HistGradientBoosting, and ExtraTrees performed similarly but slightly lower, and Ridge had the weakest results, suggesting that a simple linear model was less effective for this dataset. The table shows the RMSE results for XGBoost at the lowest of about 1.003 which in comparison to the predicted values, is better post hypertuning. The predicted best model was supposed to be CatBoost, but post hyperparameter tuning and preprocessing, it was the third best model. LightGBM came in second for the best. XGBoost uses its fast-paced decision-based machine learning methods to distribute decision trees leading the machine learning techniques for regression, classification, and ranking problems. Due to the high volume of data, nonlinear tree-based and boosting models were better suited for capturing the relationships between drug, genomic, tissue, and pathway features and LN_IC50. Table 2 further shows the hyperparameter tuning improved performance with XGBoost using Optuna. Optuna was utilized to automate and accelerate machine learning techniques. As seen in Figure 3, there is a relatively even distribution across the trend line for all of the predicted vs actual LN_IC50 values. This emphasizes the improvements methods such as preprocessing and hyperparameter tuning to cause the even distribution. 
+
+
+
